@@ -17,7 +17,7 @@ public class VetController {
 
     @GetMapping("/")
     public String showMain() {
-        return "vets/main";
+        return "main";
     }
 
     @GetMapping("/vets/add")

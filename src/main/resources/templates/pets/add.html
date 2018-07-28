@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Dodaj pacjenta</h1>
+        </div>
+    </div>
+</div>
+
+<form action="/pets/add" method="post">
+    <div class="">
+        <label for="petName">Imię</label>
+        <input type="text" class="" id="petName" name="name">
+    </div>
+    <div class="">
+        <label for="petType">Rodzaj</label>
+        <input type="text" class="" id="petType" name="type">
+    </div>
+    <div class="">
+        <label>Opis</label>
+        <textarea name="description" class="" rows="5"></textarea>
+    </div>
+
+    <button type="submit" class="">Dodaj</button>
+</form>
+
+</body>
+</html>
