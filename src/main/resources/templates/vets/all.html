@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Lista weterynarzy</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-bordered table-hover table-custom">
+                <tr class="success">
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Edytuj</th>
+                    <th>Usuń</th>
+                </tr>
+                <tr th:each="vet : ${vets}">
+                    <td th:text="${vet.name}"></td>
+                    <td th:text="${vet.lastName}"></td>
+                    <td><a th:href="@{/vets/{id}(id=${vet.id})}">Edytuj</a>
+                    <td><a th:href="@{/vets/{id}/remove(id=${vet.id})}">Usun</a>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
