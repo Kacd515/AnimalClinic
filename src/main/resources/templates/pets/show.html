@@ -39,7 +39,9 @@
         <textarea name="description" id="petDescription" th:value="${pet.description}" class="" rows="5"></textarea>
     </div>
 
-    <button type="submit" class="">Dodaj</button>
+    <a th:href="@{/pets/{id}/remove(id=${pet.id})}"><button type="button">Usuń</button></a>
+
+    <button type="submit" class="">Edytuj</button>
 </form>
 
 </body>

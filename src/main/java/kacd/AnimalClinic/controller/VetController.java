@@ -1,6 +1,7 @@
 package kacd.AnimalClinic.controller;
 
 import kacd.AnimalClinic.dao.VetDao;
+import kacd.AnimalClinic.models.Pet;
 import kacd.AnimalClinic.models.Vet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -47,6 +48,12 @@ public class VetController {
     @PostMapping("/vets/update")
     public String vetUpdate(@ModelAttribute Vet vet) {
         vetDao.save(vet);
+        return "redirect:/vets/all";
+    }
+
+    @GetMapping("/vets/{id}/remove")
+    public String petRemove(@ModelAttribute Vet vet) {
+        vetDao.delete(vet);
         return "redirect:/vets/all";
     }
 }

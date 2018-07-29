@@ -45,4 +45,11 @@ public class PetController {
         return "redirect:/pets/all";
     }
 
+    @GetMapping("/pets/{id}/remove")
+    public String petRemove(@ModelAttribute Pet pet) {
+        petDao.delete(pet);
+        return "redirect:/pets/all";
+    }
+
+
 }
