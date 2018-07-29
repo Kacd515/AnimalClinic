@@ -50,6 +50,6 @@ public class Vet {
 
     @Override
     public String toString() {
-        return name + " " + lastName;
+        return id + " " + name + " " + lastName;
     }
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Edytuj dane</h1>
+        </div>
+    </div>
+</div>
+
+<form action="/vets/update" method="post">
+
+    <input type="hidden" name="vet" th:value="${vet.id}">
+
+    <div class="">
+        <label for="vetName">Name</label>
+        <input type="text" class="" id="vetName" name="name" th:value="${vet.name}">
+    </div>
+    <div class="">
+        <label for="vetName">Lastname</label>
+        <input type="text" class="" id="VetLastName" name="lastName" th:value="${vet.lastName}">
+    </div>
+
+    <a th:href="@{/vets/{id}/remove(id=${vet.id})}"><button type="button">Usuń</button></a>
+
+    <button type="submit" class="">Edytuj</button>
+</form>
+
+</body>
+</html>

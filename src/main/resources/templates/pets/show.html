@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Edytuj Dane</h1>
+        </div>
+    </div>
+</div>
+
+<form action="/pets/update" method="post">
+
+    <input type="hidden" name="pet" th:value="${pet.id}">
+
+    <div class="">
+        <label for="petName">Imię</label>
+        <input type="text" class="" id="petName" name="name" th:value="${pet.name}">
+    </div>
+    <div class="">
+        <label for="petName">Rodzaj</label>
+        <input type="text" class="" id="petType" name="type" th:value="${pet.type}">
+    </div>
+    <div class="">
+        <label for="petName">Opis</label>
+        <textarea name="description" id="petDescription" th:value="${pet.description}" class="" rows="5"></textarea>
+    </div>
+
+    <button type="submit" class="">Dodaj</button>
+</form>
+
+</body>
+</html>
+
+</body>
+</html>

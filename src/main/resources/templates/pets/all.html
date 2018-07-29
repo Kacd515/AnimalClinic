@@ -21,14 +21,14 @@
                 <tr class="success">
                     <th>Imię</th>
                     <th>Rodzaj</th>
-                    <th>Edytuj</th>
-                    <th>Usuń</th>
+                    <th>Opis</th>
+                    <th></th>
                 </tr>
                 <tr th:each="pet : ${pets}">
                     <td th:text="${pet.name}"></td>
                     <td th:text="${pet.type}"></td>
-                    <td><a th:href="@{/pets/{id}(id=${pet.id})}">Edytuj</a>
-                    <td><a th:href="@{/pets/{id}/remove(id=${pet.id})}">Usun</a>
+                    <td th:text="${pet.description}">
+                    <td><a th:href="@{/pets/{id}(id=${pet.id})}"><button type="button">Edytuj</button> </a>
                 </tr>
             </table>
         </div>
